@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.penrice9.myapplication.eventScreen">
+
+    <me.grantland.widget.AutofitTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:text=""
+        android:textSize="35sp"
+        android:maxLines="1"
+
+        />
+
+    <com.master.glideimageview.GlideImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/date"/>
+
+       <me.grantland.widget.AutofitTextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="25sp"
+           app:layout_constraintBottom_toTopOf="@+id/location1"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        android:maxLines="1" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/location1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.5dp"
+        android:text=""
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintBottom_toTopOf="@+id/location2"
+        android:maxLines="1" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/location2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.5dp"
+        android:text=""
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location1"
+        app:layout_constraintBottom_toTopOf="@+id/location3"
+        android:maxLines="1" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/location3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.5dp"
+        android:text=""
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location2"
+        app:layout_constraintBottom_toTopOf="@+id/location4"
+        android:maxLines="1" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/location4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.5dp"
+        android:text=""
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location3"
+        app:layout_constraintBottom_toTopOf="@+id/website"
+        android:maxLines="1" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textSize="25sp"
+        android:maxLines="1"
+        android:autoLink="web"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location4"
+        app:layout_constraintBottom_toTopOf="@+id/attendSwitch"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/attendSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/website"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attend?"
+        app:layout_constraintRight_toLeftOf="@+id/attendSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/website"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="5dp"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu"
+        />
+</android.support.constraint.ConstraintLayout>
